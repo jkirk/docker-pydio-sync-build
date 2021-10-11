@@ -1,0 +1,10 @@
+---
+version: "2.1"
+services:
+  pydio-sync-build:
+    container_name: pydio-sync-build
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./pydio-sync:/tmp/pydio-sync
