@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./pydio-sync:/root/pydio-sync
-      - ./opt:/opt
-    entrypoint: /root/build-venv.sh
+      - .${VENV_BASE}:${VENV_BASE}
+    entrypoint: /root/build-venv.sh ${VENV_BASE}
 
   pydio-sync-build:
     container_name: pydio-sync-build
@@ -18,6 +18,5 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./pydio-sync:/root/pydio-sync
-      - ./opt:/opt
     working_dir: /root/pydio-sync
     entrypoint: python2 setup.py build
