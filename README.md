@@ -49,5 +49,6 @@ Install and run pydio-sync:
 ```
 sudo mv opt/pydio-sync-venv /opt
 source /opt/pydio-sync-venv/bin/activate
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 python2 pydio-sync/build/lib.linux-x86_64-2.7/pydio/main.py
 ```
