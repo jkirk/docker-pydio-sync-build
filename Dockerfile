@@ -14,6 +14,6 @@ RUN apt-get update \
   && pip install setuptools wheel \
   && pip install virtualenv
 
-COPY build.sh /root
-RUN chmod +x /root/build.sh
-ENTRYPOINT [ "/bin/bash" ]
+COPY build-venv.sh /root
+RUN chmod +x /root/build-venv.sh
+WORKDIR /root

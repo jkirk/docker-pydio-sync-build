@@ -1,11 +1,13 @@
 ---
 version: "2.1"
 services:
-  pydio-sync-build:
-    container_name: pydio-sync-build
+  pydio-sync-venv:
+    container_name: pydio-sync-venv
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./pydio-sync:/root/pydio-sync
       - ./opt:/opt
+    entrypoint:
+      - /root/build-venv.sh
