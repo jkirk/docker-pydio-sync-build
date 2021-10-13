@@ -7,4 +7,5 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./pydio-sync:/tmp/pydio-sync
+      - ./pydio-sync:/root/pydio-sync
+      - ./opt:/opt
