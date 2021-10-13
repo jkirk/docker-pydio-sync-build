@@ -16,4 +16,3 @@ RUN apt-get update \
 
 COPY build-venv.sh /root
 RUN chmod +x /root/build-venv.sh
-WORKDIR /root
